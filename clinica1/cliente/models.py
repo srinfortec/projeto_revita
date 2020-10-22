@@ -2,6 +2,20 @@ from django.db import models
 
 # Create your models here.
 
+
+class HorarioDisponivel(models.Model):
+
+    dia_semana = models.DateField(
+        null=False,
+        blank=False
+    )
+
+    horario = models.CharField(
+        max_length=255,
+        blank=False,
+        null=False
+    )
+
 class Clientes (models.Model):
 
     nome_completo = models.CharField(
@@ -32,17 +46,9 @@ class Clientes (models.Model):
         null=False,
         blank=False
     )
-
-
-class Horario_disponivel(models.Model):
-
-    dia_semana = models.DateField(
-        null=False,
-        blank=False
+    problema = models.TextField(
+        blank= True
     )
+    horario_disponivel= models.ForeignKey(HorarioDisponivel, on_delete=models.CASCADE, null=True)
 
-    horario = models.CharField(
-        max_length=255,
-        blank=False,
-        null=False
-    )
+

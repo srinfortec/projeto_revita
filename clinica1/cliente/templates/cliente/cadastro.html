@@ -26,17 +26,18 @@
 		</header>
 
 		<main>
-			<form action="" id="create-class">
+			<form method="POST"  action="{%url 'cadastro'%}" id="create-class">
+			{% csrf_token %}
 				<fieldset>
 					<legend>Seus Dados</legend>
 
 					<div class="input-block">
 						<label for="name">Nome Completo</label>
-						<input name="name" id="name" required>
+						<input name="nome_completo" id="name" required>
 					</div>
 					<div class="input-block">
 						<label for="datanasc">Data de Nascimento</label>
-						<input type="date" name="datanasc" id="datanasc" required>
+						<input type="datanasc" name="data_nascimento" id="datanasc" required>
 					</div>
 					<div class="input-block">
 						<label for="endereco">Endereço</label>
@@ -44,7 +45,7 @@
 					</div>
 					<div class="input-block">
 						<label for="whatsapp">Whatsapp <small>(somente números)</small></label>
-						<input type="whatsapp" id="whatsapp" type="number" required>
+						<input type="whatsapp" id="whatsapp" name="whatsapp" type="number" required>
 					</div>
 					<div class="input-block">
 						<label for="email">E-mail</label>
@@ -52,7 +53,7 @@
 					</div>
 					<div class="textarea-block">
 						<label for="relato">Conte-nos qual seu problema para podermos lhe direcionar à melhor profissional</label>
-						<textarea name="relato" id="relato" required></textarea>
+						<textarea name="problema" id="relato" required></textarea>
 					</div>
 
 				</fieldset>
@@ -63,16 +64,16 @@
 
                         <div class="input-block">
 							<label for="weekday">Dia da semana</label>
-							<input type="date" id="weekday" name="weekday" required>
+							<input type="dia_semana" id="weekday" name="weekday" required>
                         </div>
 
                         <div class="input-block">
                             <label for="time_from">Horário:</label>
-                            <input type="time" id="time_from" name="time_from" required>
+                            <input type="horario" id="time_from" name="time_from" required>
                         </div>
                     </div>
                 </fieldset>
-            </form>
+            </formm>
 
             <footer>
                 <button type="submit" form="create-class">Salvar cadastro</button>
