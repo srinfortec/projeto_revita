@@ -1,12 +1,50 @@
-<table class="table">
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Revita - Lista de Consultas Marcadas</title>
+	<link rel="icon" href="/static/img/lotus.png">
+    <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body class="homepage">
+
+<div id="header-wrapper">
+
+    <!--Header-->
+        <div id="header">
+            <div class="container">
+                <!--Logo-->
+                    <div id="logo">
+                        <a href="/#"><img src="/static/img/lotus.png" alt="logo" width="100" height="50" />   </a> </p>
+                    </div>
+                <!--Nav-->
+                    <nav id="nav">
+                        <ul>
+                            <li class="location"><a href="https://www.google.com/maps/place/Cl%C3%ADnica+Revita+-+Reabilita%C3%A7%C3%A3o+e+Movimento/@-8.0379892,-34.8948001,15z/data=!4m5!3m4!1s0x0:0xbff1f65a2fd5474e!8m2!3d-8.0379892!4d-34.8948001">R. Samuel Campêlo, 304 - Aflitos, Recife</a></li>
+                            <li class="contato"><a href="#">81 3204-0433</a></li>
+                            <li class="menu"><a href="#menu" class="button medium">Menu</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </div>
+<div>
+<h1> Lista de Consultas Marcadas </h1>
+
+
+<table border="1" class="table">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Nome_Completo</th>
+          <th>Ordem</th>
+          <th>Nome Completo</th>
           <th>Data de Nascimento</th>
           <th>Endereço</th>
           <th>Whatsapp</th>
           <th>E-mail</th>
+
+            <th>Data da consulta</th>
+            <th>Horario da consulta</th>
         </tr>
       </thead>
       <tbody>
@@ -18,11 +56,16 @@
               <a href="#"> {{ cliente.nome_completo }}</a>
             </td>
               <td>{{ cliente.data_nascimento }}</td>
-                <td>{{ cliente.endereço }}</td>
+                <td>{{ cliente.endereco }}</td>
                  <td>{{ cliente.whatsapp }}</td>
                     <td>{{ cliente.email }}</td>
 
+                         <td>{{ cliente.dia_semana }}</td>
+                               <td>{{ cliente.horario }}</td>
           </tr>
         {%endfor%}
       </tbody>
     </table>
+</div>
+</body>
+</html>

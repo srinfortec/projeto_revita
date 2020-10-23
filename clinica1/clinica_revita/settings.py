@@ -56,7 +56,7 @@ ROOT_URLCONF = 'clinica_revita.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],   # caminho para templates
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'clinica_revita.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+    'default': {                                    #ligação e configuração do banco
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'clinica_revita',
         'USER': 'root',
@@ -124,4 +124,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)    #endereço dos arquivos estaticos
+
+DATE_INPUT_FORMATS = ['%d/%m/%Y']

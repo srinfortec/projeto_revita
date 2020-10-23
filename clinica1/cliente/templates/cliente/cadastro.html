@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Clínica Revita</title>
+    <title>Revita - Cadastro Consulta</title>
 	<link rel="stylesheet" type="text/css" href="/static/css/cadastro.css">
 	<link rel="icon" href="/static/img/lotus.png">
 
@@ -12,7 +12,7 @@
 	<div id="container">
         <header class="page-header">
             <div class="top-bar-container">
-				<a href="#">
+				<a href="/#">
 				<img src="/static/img/1486348526-arrow-back-backwards-repeat-previous_80453.png" alt="Voltar">
 				</a>
 				<img src="/static/img/logo_branco_ret.jpeg" alt="Revita">
@@ -37,7 +37,8 @@
 					</div>
 					<div class="input-block">
 						<label for="datanasc">Data de Nascimento</label>
-						<input type="datanasc" name="data_nascimento" id="datanasc" required>
+						<!--<input type="datanasc" name="data_nascimento" id="datanasc" required>-->
+						<input type="date" name="data_nascimento" id="datanasc" required="">
 					</div>
 					<div class="input-block">
 						<label for="endereco">Endereço</label>
@@ -64,12 +65,14 @@
 
                         <div class="input-block">
 							<label for="weekday">Dia da semana</label>
-							<input type="dia_semana" id="weekday" name="weekday" required>
+							<!--<input type="weekday" id="weekday" name="dia_semana" required>-->
+								<input type="date" id="weekday" name="dia_semana" required="">
                         </div>
 
                         <div class="input-block">
                             <label for="time_from">Horário:</label>
-                            <input type="horario" id="time_from" name="time_from" required>
+                            <!--<input type="time_from" id="time_from" name="horario" required>-->
+							<input type="time" id="time_from" name="horario" required="">
                         </div>
                     </div>
                 </fieldset>
